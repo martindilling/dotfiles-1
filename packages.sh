@@ -67,15 +67,7 @@ xsltproc
 # List of Desktop packages available via apt on Ubuntu and Brew sources on
 # macOS.
 COMMON_DESKTOP_PACKAGES="
-faac
-flac
 fontforge
-id3v2
-lame
-shntool
-wireshark
-x264
-youtube-dl
 "
 
 # List of Desktop packages available via apt on Ubuntu and Brew Cask on macOS.
@@ -83,48 +75,25 @@ COMMON_BIN_PACKAGES="
 electrum
 firefox
 gimp
-handbrake
-hugin
 inkscape
 prey
-subsurface
 virtualbox
 "
 
 # Packages to install on Kubuntu desktops only.
 KUBUNTU_DESKTOP_PACKAGES="
 audacity
-bitcoin-qt
 bleachbit
 chromium-browser
 chromium-codecs-ffmpeg-extra
-dmg2img
-driftnet
-dupeguru-se
 efibootmgr
 exfat-fuse
 exfat-utils
-faad
 gimp-plugin-registry
-gitg
-hunspell-fr
-hunspell-fr-classical
-kdenlive
 kompare
 kwrite
-libavcodec-extra
-libdvd-pkg
-mkvtoolnix
-mkvtoolnix-gui
-mpv
-network-manager-openvpn
 pdftk
-picard
-runsnakerun
-sqlitebrowser
-transcode
 ttf-ancient-fonts
-unclutter
 "
 
 # Python packages to install from PyPi on all targets.

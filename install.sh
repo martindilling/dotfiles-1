@@ -86,10 +86,10 @@ else
 fi
 
 # Install & upgrade all global python modules
-for p in $PYTHON_PACKAGES
-do
-    pip install --upgrade "$p"
-done
+#for p in $PYTHON_PACKAGES
+#do
+#    pip install --upgrade "$p"
+#done
 
 # Patch terminal font on desktops for Vim's Airline plugin.
 # See: https://powerline.readthedocs.org/en/latest/fontpatching.html

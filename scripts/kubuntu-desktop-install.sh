@@ -1,11 +1,7 @@
 #!/usr/bin/env bash
 set -x
 
-sudo add-apt-repository -y ppa:kdenlive/kdenlive-testing
-sudo add-apt-repository -y ppa:bitcoin/bitcoin
-sudo add-apt-repository -y ppa:subsurface/subsurface
-sudo add-apt-repository -y ppa:micahflee/ppa
-sudo add-apt-repository -y ppa:hsoft/ppa
+#sudo add-apt-repository -y ppa:hsoft/ppa
 
 sudo apt update
 # Force yes so that package maintainer's version of config files always prevail.
@@ -32,34 +28,34 @@ sudo apt install -y $KUBUNTU_DESKTOP_PACKAGES
 
 
 sudo apt install -y virt-manager
-sudo usermod -a -G libvirtd kevin
-sudo usermod -a -G kvm kevin
+#sudo usermod -a -G libvirtd kevin
+#sudo usermod -a -G kvm kevin
 
 
-sudo apt install -y redshift gtk-redshift geoclue
+#sudo apt install -y redshift gtk-redshift geoclue
 
 
 
 # Install Dropbox if not already there
-[ ! -f ~/.dropbox-dist/dropbox ] && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar -xvz --directory ~ -f -
+#[ ! -f ~/.dropbox-dist/dropbox ] && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar -xvz --directory ~ -f -
 
 
 # Install google music manager
-wget -qO - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-wget -P /tmp "https://dl.google.com/linux/direct/google-musicmanager-beta_current_amd64.deb"
-sudo apt install /tmp/google-musicmanager-beta_current_amd64.deb
-rm /tmp/google-musicmanager-beta_current_amd64.deb
+#wget -qO - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+#wget -P /tmp "https://dl.google.com/linux/direct/google-musicmanager-beta_current_amd64.deb"
+#sudo apt install /tmp/google-musicmanager-beta_current_amd64.deb
+#rm /tmp/google-musicmanager-beta_current_amd64.deb
 
 
 # Install Steam
-sudo dpkg --add-architecture i386
-sudo apt update
-sudo apt install -y steam mesa-utils
+#sudo dpkg --add-architecture i386
+#sudo apt update
+#sudo apt install -y steam mesa-utils
 
 
 # Install Tor Browser.
-sudo apt install -y torbrowser-launcher
-torbrowser-launcher
+#sudo apt install -y torbrowser-launcher
+#torbrowser-launcher
 # The launcher package above starts tor service by default to download the
 # initial browser binary. See:
 # https://github.com/micahflee/torbrowser-launcher/issues/188#issuecomment-114574424
@@ -67,20 +63,20 @@ torbrowser-launcher
 #sudo systemctl stop tor.service
 #sudo systemctl disable tor.service
 # Force installation of uBlock origin
-wget https://addons.mozilla.org/firefox/downloads/file/319372/ -O \
-    ~/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser/TorBrowser/Data/Browser/profile.default/extensions/uBlock0@raymondhill.net.xpi
+#wget https://addons.mozilla.org/firefox/downloads/file/319372/ -O \
+#    ~/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser/TorBrowser/Data/Browser/profile.default/extensions/uBlock0@raymondhill.net.xpi
 
 
 # Install Popcorn Time
-rm -rf ~/Popcorn-Time
-mkdir -p ~/Popcorn-Time
-wget -O - "https://get.popcorntime.sh/build/Popcorn-Time-0.3.9-Linux-64.tar.xz" | tar -xvJ --strip-components 1 --directory ~/Popcorn-Time -f -
+#rm -rf ~/Popcorn-Time
+#mkdir -p ~/Popcorn-Time
+#wget -O - "https://get.popcorntime.sh/build/Popcorn-Time-0.3.9-Linux-64.tar.xz" | tar -xvJ --strip-components 1 --directory ~/Popcorn-Time -f -
 
 
 # Install local copy of wikipedia.
-rm -rf ~/wikipedia
-mkdir -p ~/wikipedia
-wget -O - "https://download.kiwix.org/bin/kiwix-linux-x86_64.tar.bz2" | tar -xvj --directory ~/wikipedia -f -
+#rm -rf ~/wikipedia
+#mkdir -p ~/wikipedia
+#wget -O - "https://download.kiwix.org/bin/kiwix-linux-x86_64.tar.bz2" | tar -xvj --directory ~/wikipedia -f -
 
 
 # Remove all unused default KDE apps.
